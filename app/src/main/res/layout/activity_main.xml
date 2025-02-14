@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/flight_info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerStyle="large"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <net.skyscanner.backpack.text.BpkText
+            android:id="@+id/flight_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flight BA1456"
+            style="@style/bpkTextHeading1" />
+    </net.skyscanner.backpack.card.BpkCardView>
+
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/departure_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerStyle="large"
+        app:layout_constraintTop_toBottomOf="@id/flight_info_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/departure_airport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDI (Edinburgh)"
+                style="@style/bpkTextHeading2" />
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/departure_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08:30 AM"
+                style="@style/bpkTextSubheading" />
+        </LinearLayout>
+    </net.skyscanner.backpack.card.BpkCardView>
+
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/arrival_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerStyle="large"
+        app:layout_constraintTop_toBottomOf="@id/departure_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/arrival_airport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LHR (London Heathrow)"
+                style="@style/bpkTextHeading2" />
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/arrival_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:15 AM"
+                style="@style/bpkTextSubheading" />
+        </LinearLayout>
+    </net.skyscanner.backpack.card.BpkCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
